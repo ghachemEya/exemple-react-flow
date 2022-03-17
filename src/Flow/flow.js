@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import ReactFlow, { addEdge, MiniMap, Controls, ReactFlowProvider } from 'react-flow-renderer';
+import ReactFlow, { addEdge, MiniMap, Controls, ReactFlowProvider, Background } from 'react-flow-renderer';
 
 import CustomNode from './customNode';
 import Sidebar from './Sidebar';
@@ -97,7 +97,7 @@ const Flow = () => {
       onDrop={onDrop}
       onDragOver={onDragOver}
       onNodeMouseMove={onNodeMouseMove}
-      style={{ background: initBgColor }}
+      style={{Background: 'grey'}}
       nodeTypes={nodeTypes}
       connectionLineStyle={connectionLineStyle}
       snapToGrid={true}
@@ -118,9 +118,9 @@ const Flow = () => {
       <Controls />
     
     </ReactFlow>
-    <Sidebar/>
+    
       </div>
-      
+      <Sidebar/>
       </ReactFlowProvider>
     </div>
   
