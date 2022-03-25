@@ -12,6 +12,12 @@ const Sidebar = () => {
       <div className="dndnode selectorNode" onDragStart={(event) => onDragStart(event, 'selectorNode')} draggable>
         Arithmetic Op
       </div>
+
+      <div className="dndnode if" onDragStart={(event) => onDragStart(event, 'If')} draggable>
+        If
+      </div>
+
+     
      
     </aside>
   );

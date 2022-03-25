@@ -44,11 +44,13 @@ export default memo(({ data, isConnectable }) => {
     </div>
   );
 
+  
   return (
     <>
       <Handle
         type="target"
         position="top"
+
         style={{ background: "#555" }}
         onConnect={(params) => console.log("handle onConnect", params)}
         isConnectable={isConnectable}
@@ -57,21 +59,17 @@ export default memo(({ data, isConnectable }) => {
         onDoubleClick={confirmShowConfig}
         style={{ border: "1px solid #00d000" }}
       >
-        Arithmetic Operations hhhhh
+        Arithmetic Operations
       </div>
 
       <Handle
         type="source"
-        position="right"
+        position="bottom"
         id="a"
+
         isConnectable={isConnectable}
       />
-      <Handle
-        type="source"
-        position="left"
-        id="b"
-        isConnectable={isConnectable}
-      />
+     
 
       <Dialog
         visible={visible}
